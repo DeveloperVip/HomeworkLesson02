@@ -1,4 +1,4 @@
-const order = {
+let order = {
   cart: [
     { id: 1, name: "ao dai", amount: 5, price: 100000 },
     { id: 2, name: "ao coc", amount: 2, price: 200000 },
@@ -8,16 +8,14 @@ const order = {
   customer: "Name",
   address: "12 Giai Phong Street",
 };
-let totalLyMoney = 0;
-let totalOfAmount = 0;
-let myFunc = (order) => {
-  for (let keys in order) {
-    if (keys == "cart") {
-      for (let i = 0; i < order[keys].length; i++) {
-        totalOfAmount += order[keys][i].amount;
-        totalLyMoney += order[keys][i].price;
-      }
-    }
-  }
-  return [totalOfAmount, totalLyMoney];
-};
+//* 	Please use only reduce method, and only one time, and return 2 variables:
+//* totalOfMoney = 1870000, totalOfAmount = 14;
+
+const { cart } = order;
+let total = cart.reduce(
+  (variable, cart) => {
+    return [variable[0] + cart.amount * cart.price, variable[1] + cart.amount];
+  },
+  [0, 0]
+);
+console.log(total);

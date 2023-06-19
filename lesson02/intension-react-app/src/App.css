@@ -1,0 +1,33 @@
+.App {
+  width: 400px;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: lighter;
+}
+.header {
+  width: 400px;
+  height: 30px;
+  font-size: larger;
+  border-style: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+.listItems {
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  margin-bottom: 10px;
+}
+p {
+  margin: 0px;
+}
+.foot {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}

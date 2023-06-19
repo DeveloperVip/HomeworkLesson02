@@ -1,1 +1,2 @@
-Đã hoàn thành từ bài 1 đến bài 9 . Chưa làm được bài 10,11.
+Đã hoàn thành từ bài 1 đến bài 11. Còn bài 10
+Session3: completed
