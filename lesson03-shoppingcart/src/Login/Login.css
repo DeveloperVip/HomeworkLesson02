@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-Roboto);
+}
+.main {
+  border: none;
+  height: 395px;
+  width: 832px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-shadow: -3px 1px 18px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  display: flex;
+}
+.logo {
+  width: 50%;
+  height: 100%;
+  background-color: #faf096;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+h2 {
+  font-size: 68px;
+  line-height: 80px;
+}
+.close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 799px;
+  top: 8px;
+  font-family: "Red Rose";
+  font-style: normal;
+  font-weight: 700;
+  float: right;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.register {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+h3 {
+  width: 319.17px;
+  height: 28px;
+  font-size: x-large;
+}
+.b-register {
+  background-color: #ffd333;
+  border-radius: 5px;
+  width: 300px;
+  height: 37px;
+  border: none;
+  margin: 15px 0px 5px;
+}
+Input {
+  width: 300px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  height: 30px;
+}
+.psw {
+  width: 300px;
+  display: flex;
+  overflow: hidden;
+}
+.psw > button {
+  border: none;
+  background-color: white;
+  font-size: x-small;
+  border-bottom: 1px solid black;
+}
+.b-login {
+  width: 300px;
+  background-color: white;
+  border: none;
+}
