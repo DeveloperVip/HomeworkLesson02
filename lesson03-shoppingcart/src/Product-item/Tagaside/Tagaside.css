@@ -1,0 +1,8 @@
+.tagAside {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+.tagAside > p {
+  color: white;
+}
