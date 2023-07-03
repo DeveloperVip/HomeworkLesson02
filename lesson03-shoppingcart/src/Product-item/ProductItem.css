@@ -1,6 +1,11 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 .home {
   background-color: #ffd333;
   height: 162px;
+  width: 100%;
 }
 .topBar {
   height: 38px;
@@ -58,13 +63,14 @@ span {
   justify-content: space-between;
 }
 .main_home {
-  width: 80%;
+  width: 90%;
+  height: 628px;
   display: flex;
-  margin-top: 7px;
-  margin-left: 0px;
+  margin: 7px auto;
 }
 aside {
-  width: 30%;
+  width: 280px;
+  height: 628px;
   background-color: #3d464d;
   color: white;
   margin-right: 5px;
@@ -79,14 +85,15 @@ aside > div > p {
   display: flex;
   font-size: 32px;
 }
-section > img {
-  max-width: 100%;
-}
 .carousal {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  gap: 7px 5px;
+  width: 862px;
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
 }
 .carousal > img {
-  max-width: 100%;
+  width: 100%;
+  height: 224px;
+  object-fit: cover;
+  overflow: hidden;
 }

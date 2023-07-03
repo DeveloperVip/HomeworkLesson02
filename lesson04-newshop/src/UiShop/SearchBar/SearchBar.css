@@ -1,0 +1,22 @@
+.headerBar {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+h1 {
+  text-transform: uppercase;
+}
+
+img {
+  height: 50%;
+}
+.search {
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  padding: 5px;
+  border-radius: 8px;
+  gap: 10px;
+}

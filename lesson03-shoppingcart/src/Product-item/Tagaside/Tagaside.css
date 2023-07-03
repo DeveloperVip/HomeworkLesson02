@@ -1,8 +1,13 @@
 .tagAside {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px;
 }
 .tagAside > p {
   color: white;
+}
+.tagAside > img {
+  box-shadow: none;
+  height: 100%;
 }

@@ -5,7 +5,7 @@ function Tagaside(props) {
   return (
     <div>
       <a href="" className="tagAside">
-        <p>{name}</p>
+        <p className="my-0">{name}</p>
         <img src="./Vector (1).png" alt="" />
       </a>
     </div>

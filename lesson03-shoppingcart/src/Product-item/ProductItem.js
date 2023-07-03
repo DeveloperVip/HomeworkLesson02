@@ -1,10 +1,40 @@
 import "./ProductItem.css";
 import Tagaside from "./Tagaside/Tagaside";
-import Cardproduct from "./Card/Card";
 
-function ProductItem({ name, price }) {
+import { useState } from "react";
+import Card from "./Card/Card";
+// import { Items } from "./MockData/Product";
+
+const Items = [
+  {
+    name: "Iphone",
+    price: "150",
+    self: "10%",
+  },
+  {
+    name: "Samsung",
+    price: "80",
+    self: "20%",
+  },
+  {
+    name: "Bphone",
+    price: "50",
+    self: "10%",
+  },
+  {
+    name: "Ipad",
+    price: "200",
+    self: "5%",
+  },
+];
+
+function ProductItem() {
+  const [state, setState] = useState(0);
+  const renderProduct = Items.map(({ name, price, self }) => {
+    return <Card name={name} price={price} self={self} />;
+  });
   return (
-    <div className="home">
+    <div className="home ">
       <div className="topBar">
         <a href="">About us</a>
         <a href="">Contacts</a>
@@ -18,7 +48,7 @@ function ProductItem({ name, price }) {
         <div className="categories">
           <img src="./menu (1).png" alt="" />
 
-          <p>Categories</p>
+          <p className="my-0">Categories</p>
           <div className="top-bar">
             <input type="text" placeHolder="Search Items" />
             <img src="./SearchIcon.png" alt="" />
@@ -26,6 +56,7 @@ function ProductItem({ name, price }) {
         </div>
         <a href="">
           <img src="./Cart-vector.png" alt="" />
+          <p>{state}</p>
         </a>
         <a href="">
           <img src="./UserItem.png" alt="" />
@@ -33,9 +64,9 @@ function ProductItem({ name, price }) {
       </div>
       <div className="main_home">
         <aside>
-          <div>
+          <div className="d-flex flex-row justify-content-center align-items-center">
             <img src="./menu.png" alt="" />
-            <p>Categories</p>
+            <p className="my-0">Categories</p>
           </div>
           <Tagaside name="Computer" />
           <Tagaside name="Hand Tools" />
@@ -48,18 +79,33 @@ function ProductItem({ name, price }) {
           <Tagaside name="Foods" />
           <Tagaside name="Drinks" />
         </aside>
-        <section>
+        <div
+          className="container"
+          style={{
+            width: "862px",
+          }}
+        >
           <img src="./Photos.png" alt="" />
-          <div className="carousal">
+          <div className="carousal ">
             <img src="./Photos.png" alt="" />
             <img src="./Photos.png" alt="" />
             <img src="./Photos.png" alt="" />
           </div>
-          <div>
-            <Cardproduct />
-          </div>
-        </section>
+        </div>
       </div>
+      <section>
+        <div
+          style={{
+            width: "90%",
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            gap: "20px",
+          }}
+        >
+          {renderProduct}
+        </div>
+      </section>
     </div>
   );
 }
