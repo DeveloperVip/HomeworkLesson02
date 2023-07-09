@@ -1,10 +1,12 @@
-function Input(Props) {
-  const { text, placeholder } = Props;
-  return (
-    <div>
-      <input type={text} placeholder={placeholder} />
-    </div>
+{
+  /* <div>
+  function Input(Props) {"{"}
+  const {"{"} text, placeholder {"}"} = Props; return (
+  <div>
+    <input type="{text}" placeholder="{placeholder}" />
+  </div>
   );
+  {"}"}
+  export default Input;
+</div>; */
 }
-
-export default Input;

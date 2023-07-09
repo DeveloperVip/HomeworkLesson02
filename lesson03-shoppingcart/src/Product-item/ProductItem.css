@@ -3,8 +3,6 @@
   box-sizing: border-box;
 }
 .home {
-  background-color: #ffd333;
-  height: 162px;
   width: 100%;
 }
 .topBar {
@@ -44,6 +42,7 @@ input {
 }
 .mainBar {
   height: 124px;
+  background-color: #ffd333;
   display: flex;
   flex-direction: row;
   align-items: center;

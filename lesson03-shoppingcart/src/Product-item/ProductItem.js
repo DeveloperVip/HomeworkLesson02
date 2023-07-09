@@ -1,38 +1,12 @@
 import "./ProductItem.css";
 import Tagaside from "./Tagaside/Tagaside";
-
-import { useState } from "react";
-import Card from "./Card/Card";
-// import { Items } from "./MockData/Product";
-
-const Items = [
-  {
-    name: "Iphone",
-    price: "150",
-    self: "10%",
-  },
-  {
-    name: "Samsung",
-    price: "80",
-    self: "20%",
-  },
-  {
-    name: "Bphone",
-    price: "50",
-    self: "10%",
-  },
-  {
-    name: "Ipad",
-    price: "200",
-    self: "5%",
-  },
-];
+import { useContext, useEffect, useState } from "react";
+import { ContextItems } from "./Context/Context";
+import CardList from "./Card/CardList";
 
 function ProductItem() {
-  const [state, setState] = useState(0);
-  const renderProduct = Items.map(({ name, price, self }) => {
-    return <Card name={name} price={price} self={self} />;
-  });
+  const { Contain } = useContext(ContextItems);
+
   return (
     <div className="home ">
       <div className="topBar">
@@ -50,13 +24,13 @@ function ProductItem() {
 
           <p className="my-0">Categories</p>
           <div className="top-bar">
-            <input type="text" placeHolder="Search Items" />
+            <input type="text" placeholder="Search Items" />
             <img src="./SearchIcon.png" alt="" />
           </div>
         </div>
         <a href="">
           <img src="./Cart-vector.png" alt="" />
-          <p>{state}</p>
+          <p>{Contain.length}</p>
         </a>
         <a href="">
           <img src="./UserItem.png" alt="" />
@@ -94,16 +68,8 @@ function ProductItem() {
         </div>
       </div>
       <section>
-        <div
-          style={{
-            width: "90%",
-            margin: "0 auto",
-            display: "flex",
-            alignItems: "center",
-            gap: "20px",
-          }}
-        >
-          {renderProduct}
+        <div>
+          <CardList />
         </div>
       </section>
     </div>

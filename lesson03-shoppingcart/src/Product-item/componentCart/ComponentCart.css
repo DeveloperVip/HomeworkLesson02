@@ -1,0 +1,8 @@
+.contain {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}

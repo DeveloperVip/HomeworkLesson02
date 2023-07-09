@@ -1,12 +1,19 @@
 // import logo from "./logo.svg";
-import "./Login/Login.css";
-import Productitem from "./Product-item/ProductItem";
-import Login from "./Login/Login.js";
+// import "./Login/Login.css";
+// import Login from "./Login/Login.js";
+import ProductItem from "./Product-item/ProductItem";
+import { Context } from "./Product-item/Context/Context";
+import ComponentCart from "./Product-item/componentCart/ComponentCart";
+import "./App.css";
+
 function App() {
   return (
-    <div className="App">
-      <Productitem />
-    </div>
+    <Context>
+      <div className="App contain">
+        <ProductItem />
+        <ComponentCart />
+      </div>
+    </Context>
   );
 }
 
